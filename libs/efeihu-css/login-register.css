@@ -1,0 +1,47 @@
+body{background: url(../../img/login-register/bg.jpg) repeat-x;width: 100%;height: 100%;}
+a{text-decoration:underline;}
+.header{background: #eeeeee;border-bottom: 1px solid #ddd;width: 100%;}
+.header-contain{height:28px ;line-height: 28px;margin: 0 auto;width: 965px;padding-left: 15px;}
+.header-contain span{color: #999;}
+.header-contain span a:hover{color: #C5002C;}
+.header-contain-right{float: right;height: 24px;padding-top: 2px;}
+.header-contain-right>li{float: left;margin-right: 8px;line-height: 24px;position: relative;}
+.myacount{padding-right: 20px;background: url(../../img/login-register/333.gif) no-repeat 55px 10px;padding-left: 5px;position: relative;}
+.myacount ul{width: 71px;background: white;border: 1px solid #C7012C;position:absolute;top: 27px;left: 0;text-indent: 3px;}
+.myacount ul a{color: #666;text-decoration: none;display: block;height: 20px;line-height: 20px;}
+.myacount:hover{background: #C7012C url(../../img/login-register/332.gif) no-repeat 55px 10px;}
+.myacount:hover>a{color: white;text-decoration: none;}
+.myacount:hover ul{z-index: 1;top: 24px; }
+.myacount ul a:hover{text-decoration: underline;background: #FFFFBB;}
+
+.help{padding-right: 8px;}
+.header-contain-right a{color: #666;}
+.sug{padding-left: 14px;background: url(../../img/login-register/pen.gif) no-repeat 0 8px;}
+.tel{font: bold 14px/24px simsun,Arial, sans-serif;padding-left: 20px;color: #666;background: url(../../img/login-register/phone.gif) no-repeat 5px 8px;}
+
+.content{width: 950px;height: 465px;margin:0 auto;background: url(../../img/login-register/login_bg.jpg) no-repeat center;position: relative;border-bottom: 1px solid #CCCCCC;}
+.login_box{width: 328px;height: 350px;position: absolute;bottom: 64px;right: 177px;border:2px solid #EEDFBB;}
+.login_box a{color:#3F70FC;}
+.login_box a:hover{color:#C5002C ;}
+.title{height: 31px;line-height: 31px;background: url(../../img/login-register/titleBG.png)repeat-x;font: bold 14px/31px Verdana, Geneva, sans-serif;padding-left: 10px;color: #666;}
+.box-main{border: 1px solid #C7012C;padding: 10px;height: 300px;background: white;}
+.welcome{height: 30px;line-height: 30px;border: 1px solid #ccc;padding-left: 10px;margin-bottom: 7px;background: #FAFAFA;color: #666;}
+.box-main p{height: 32px; line-height: 32px;padding-left: 20px;margin-bottom: 2px;color: #666;}
+.box-main p input{width: 210px;height: 22px;border: solid 1px #cccccc;padding: 0 5px;margin-top: 4px;}
+a.forget{margin: 5px 0 10px 70px;display: block;}
+
+.union{margin-top: 5px;border-top: 1px dashed #ccc;padding-left: 74px;position: relative;padding-top: 3px;overflow: hidden;}
+.union span{display: inline-block;color: #666;height: 30px;line-height: 30px;padding: 0 10px 0 20px;background: url(../../img/login-register/ico_alipay.gif) no-repeat 2px 5px;}
+.union b{position: absolute;left: 12px;top: 13px;color: #666;}
+.union input{width: 140px;height: 40px;margin-top: 10px;margin-right: 16px;background:url(../../img/login-register/sitenav.png) no-repeat 0 -60px;border: 0;outline: none;float: left;}
+.union input:hover{background-position: 0 -100px;}
+.union a.free{float: left;margin-top: 20px;}
+.union .span_box{overflow: hidden;}
+
+.footer{width: 950px;margin: 0 auto;padding-top: 7px;position: relative;}
+.footer p{line-height: 18px; color: #666;}
+.footer .p1 a{color:#0066ff ;text-decoration: none;}
+.footer .p1 a:hover{text-decoration: underline;}
+
+.footer .p2 a{text-decoration: none;color: #999999;}
+.footer img{width: 36px;height: 50px;position:absolute;right: 0;top: 6px;}

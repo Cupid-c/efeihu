@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.shop-tip-wrap {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0, 0, 0, 0.3);
+				z-index: 1000;
+				display: none;
+			}
+			
+			.shop-tip {
+				width: 500px;
+				background: rgba(255, 255, 255, 1);
+				margin: 0 auto;
+				margin-top: 100px;
+				border-radius: 4px;
+				overflow: hidden;
+			}
+			
+			.shop-tip h3 {
+				height: 49px;
+				border-bottom: solid 1px #F14D58;
+				color: #333;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 50px;
+				padding-left: 15px;
+				background: #F9F9F9;
+				position: relative;
+			}
+			
+			.shop-tip h3 a {
+				width: 15px;
+				height: 15px;
+				background: url(img/detailed-page/ui_bg_close.png) no-repeat 0 0;
+				position: absolute;
+				top: 18px;
+				right: 14px;
+			}
+			
+			.shop-tip h3 a:hover {
+				background-position: 0 -15px;
+			}
+			
+			.shop-tip .success_hint {
+				padding: 20px 0 20px 190px;
+				background: url(img/detailed-page/ui_icon_sucess.png) no-repeat 130px 20px;
+			}
+			
+			.shop-tip .success_hint .title {
+				font-size: 16px;
+				font-weight: bold;
+			}
+			
+			.shop-tip .success_hint .des em,
+			.main-show .shop-tip .success_hint .des b {
+				font-size: 16px;
+				color: #c7012c;
+				font-weight: bold;
+				margin: 0 6px;
+			}
+			
+			.shop-tip .op {
+				padding-left: 140px;
+				margin-bottom: 25px;
+				overflow: hidden;
+			}
+			
+			.shop-tip .op a {
+				float: left;
+				height: 40px;
+				background: url(img/detailed-page/vi_minCart.png) no-repeat;
+				font-size: 14px;
+				line-height: 40px;
+				text-align: center;
+				margin-right: 15px;
+			}
+			
+			.shop-tip .op .continue {
+				width: 100px;
+			}
+			
+			.shop-tip .op .continue:hover {
+				color: #0066FF;
+			}
+			
+			.shop-tip .op .go-chart {
+				width: 122px;
+				background-position: 0 -40px;
+				color: white;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="shop-tip-wrap">
+			<div class="shop-tip">
+				<h3>购物提示<a></a></h3>
+				<div class="success_hint">
+					<p class="title">该商品已成功放入购物车</p>
+					<p class="des"> &nbsp;" </p>
+					<!--<p class="des">购物车共<b>1</b>件商品   合计：$<em>111</em></p>-->
+				</div>
+				<div class="op">
+					<a href="list-page.html" class="continue">
+						继续购物
+					</a>
+					<a href="chart.html" class="go-chart" target='_blank'>
+						去结算
+					</a>
+				</div>
+
+			</div>
+			<script type="text/javascript">
+				$(function() {
+
+					$('.shop-tip h3 a').click(function() {
+						$('.shop-tip-wrap').hide();
+					})
+
+					$('.goods-list').on("click", 'a.buy', function() {
+						var $this_L = $(this);
+						set_cookie($this_L);
+					})
+
+				})
+			</script>
+		</div>
+	</body>
+
+</html>

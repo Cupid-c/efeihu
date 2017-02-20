@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="libs/base.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.header {
+				background: url(img/homepage/headbg.jpg) repeat-x;
+				width: 100%;
+				border-bottom: solid 1px #ccc;
+			}
+			
+			.header-contain {
+				height: 29px;
+				line-height: 29px;
+				margin: 0 auto;
+				width: 1200px;
+			}
+			
+			.header-contain span {
+				color: #666;
+			}
+			
+			.header-contain a {
+				color: #0066f9;
+			}
+			
+			.header-contain span a:hover {
+				color: #C5002C;
+			}
+			
+			.header-contain-right {
+				float: right;
+				height: 24px;
+				padding-top: 2px;
+			}
+			
+			.header-contain-right>li {
+				float: left;
+				margin-right: 8px;
+				line-height: 24px;
+				position: relative;
+			}
+			
+			.header-contain-right li>a:hover {
+				color: #0066f9;
+				text-decoration: underline;
+			}
+			
+			.myacount {
+				padding-right: 20px;
+				background: url(img/login-register/333.gif) no-repeat 55px 10px;
+				padding-left: 5px;
+				position: relative;
+			}
+			
+			.myacount ul {
+				width: 71px;
+				background: white;
+				border: 1px solid #C7012C;
+				position: absolute;
+				top: 27px;
+				left: 0;
+				text-indent: 3px;
+				display: none;
+			}
+			
+			.myacount ul a {
+				color: #666;
+				text-decoration: none;
+				display: block;
+				height: 20px;
+				line-height: 20px;
+			}
+			
+			.myacount:hover {
+				background: #C7012C url(img/login-register/332.gif) no-repeat 55px 10px;
+			}
+			
+			.myacount:hover>a {
+				color: white;
+				text-decoration: none;
+			}
+			
+			.myacount:hover ul {
+				z-index: 1;
+				top: 24px;
+				display: block;
+			}
+			
+			.myacount ul a:hover {
+				text-decoration: underline;
+				background: #FFFFBB;
+			}
+			
+			.help {
+				padding-right: 8px;
+			}
+			
+			.header-contain-right a {
+				color: #666;
+			}
+			
+			.sug {
+				padding-left: 14px;
+				background: url(img/login-register/pen.gif) no-repeat 0 8px;
+			}
+			
+			.tel {
+				font: bold 12px/24px simsun, Arial, sans-serif;
+				padding-left: 20px;
+				color: #666;
+				background: url(img/login-register/phone.gif) no-repeat 5px 8px;
+			}
+			
+			.middle {
+				width: 1200px;
+				margin: 0 auto;
+				margin-bottom: 16px;
+				overflow: hidden;
+			}
+			
+			.middle img {
+				float: left;
+				margin: 12px 0 0 19px;
+			}
+			
+			.middle .seach {
+				float: left;
+				margin-top: 22px;
+				width: 426px;
+				height: 30px;
+				border: 1px solid #ae0001;
+			}
+			
+			.middle .seach .txt {
+				border: 0;
+				width: 334px;
+				height: 28px;
+				line-height: 28px;
+				outline: none;
+				padding: 0 6px;
+				float: left;
+			}
+			
+			.middle .seach .btn {
+				width: 80px;
+				height: 30px;
+				color: white;
+				text-align: center;
+				line-height: 30px;
+				background: #C7012C;
+				border: 0;
+				float: left;
+				font-size: 16;
+				font-weight: bold;
+			}
+			
+			.nav {
+				width: 1200px;
+				height: 40px;
+				margin: 0 auto;
+				background: #c7012c;
+				border-radius: 3px 3px 0 0;
+				position: relative;
+				font-size: 16px;
+				color: white;
+				line-height: 40px;
+			}
+			
+			.nav>a {
+				color: white;
+				font-size: 16px;
+				line-height: 40px;
+				display: inline-block;
+			}
+			
+			.nav .classify {
+				width: 200px;
+				padding-left: 25px;
+				letter-spacing: 1px;
+				background: url(img/homepage/classify.jpg) no-repeat 190px 12px;
+				font-weight: bold;
+			}
+			
+			.nav .classify:hover .nav .drop-menu {
+				display: block;
+			}
+			
+			.nav .lot {
+				color: #FF0;
+				background: url(img/homepage/menu_bg.PNG);
+				padding: 0 27px;
+				position: relative;
+				top: -2px;
+				height: 42px;
+				font-weight: bold;
+			}
+			
+			.nav .page {
+				padding: 0 5px;
+				position: relative;
+			}
+			
+			.nav .page:hover {
+				color: #FDCA30;
+			}
+			
+			.nav .page img {
+				position: absolute;
+				top: -3px;
+				right: 0;
+			}
+			
+			.nav .shopcar {
+				float: right;
+				margin: 6px 11px 0 0;
+			}
+			
+			.nav .drop-menu {
+				width: 225px;
+				background: #FFEFE0;
+				border: solid 1px #C7022D;
+				position: absolute;
+				top: 40px;
+				z-index: 100;
+				display: none;
+				border-top: 0;
+			}
+			
+			.nav .drop-menu .menu-list>li {
+				position: relative;
+				width: 225px;
+				height: 51px;
+			}
+			
+			.nav .drop-menu li h3 {
+				height: 44px;
+				padding: 2px 0 5px 2px;
+				line-height: 44px;
+				background: url(img/list-page/sl_header_category_line.png) no-repeat 9px 49px;
+				font-weight: bold;
+			}
+			
+			.nav .drop-menu li h3 a {
+				font-size: 16px;
+				color: #000;
+				padding-left: 30px;
+				background: url(img/list-page/btm.png) no-repeat 22px -24px;
+			}
+			
+			.nav .drop-menu li a:hover {
+				color: #C7022D;
+				text-decoration: underline;
+			}
+			
+			.nav .drop-menu li .menu-content {
+				border: solid 2px #C7022D;
+				position: absolute;
+				width: 705px;
+				left: 224px;
+				padding: 10px 10px 0 15px;
+				top: -155px;
+				overflow: hidden;
+				background: #fff url(img/list-page/sl_header_category_bg.png) repeat-y right top;
+				z-index: -10;
+				display: none
+			}
+			
+			.menu-content .content-left {
+				width: 475px;
+				color: #666;
+			}
+			
+			.menu-content .content-left a {
+				display: inline-block;
+				height: 42px;
+				line-height: 20px;
+				padding: 0 8px 0 10px;
+				margin: 0 6px 4px 0;
+				background: url(img/list-page/btm.png) no-repeat 4px -72px;
+				color: #666;
+				font-size: 12px;
+			}
+			
+			.menu-content .content-right {
+				width: 200px;
+				padding: 0 0 5px 10px;
+				background: #fff8f0;
+			}
+			
+			.menu-content .content-right h4 a {
+				height: 24px;
+				color: #C7012C;
+				display: block;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			
+			.menu-content .content-right li {
+				float: left;
+			}
+			
+			.menu-content .content-right a {
+				display: inline-block;
+				height: 20px;
+				line-height: 20px;
+				margin-bottom: 4px;
+				width: 100px;
+				color: #666;
+				font-size: 12px;
+			}
+			
+			.nav .drop-menu>ul> li:hover {
+				border: solid 2px #C7022D;
+				border-right: 0;
+				background: white;
+				width: 227px;
+				height: 47px;
+			}
+			
+			.nav .drop-menu>ul> li:hover h3 {
+				padding: 0px 0 7px 0px;
+				;
+			}
+			
+			.nav .drop-menu>ul>li:hover>.menu-content {
+				display: block;
+			}
+			
+			.nav .drop-menu .li1 .menu-content {
+				left: 224px;
+				top: -2px;
+			}
+			
+			.nav .drop-menu .li2 .menu-content {
+				left: 224px;
+				top: -53px;
+			}
+			
+			.nav .drop-menu .li3 .menu-content {
+				left: 224px;
+				top: -104px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="header-contain">
+				<span>您好，欢迎来到飞虎乐购！<a href="login.html" > 安全登陆</a> 还没加入我们？<a href="register.html">免费注册</a></span>
+				<ul class="header-contain-right">
+					<li class="myacount">
+						<a href="#">我的账户</a>
+						<ul>
+							<li>
+								<a href="#">账户首页</a>
+							</li>
+							<li>
+								<a href="#">我的收藏</a>
+							</li>
+							<li>
+								<a href="#">我的订单</a>
+							</li>
+						</ul>
+					</li>
+					<li class="help">
+						<a href="#">网站导航</a> |</li>
+					<li class="sug">
+						<a href="#">加入收藏</a>
+					</li>
+					<li class="tel">400 833 6900</li>
+				</ul>
+			</div>
+
+		</div>
+		<div class="middle">
+			<img src="img/homepage/slide_logo.png" />
+			<div class="seach">
+				<input class="txt" type="text" name="" id="" value="" />
+				<input class="btn" type="button" name="" id="" value="搜索" />
+			</div>
+		</div>
+		<div class="nav">
+			<a class="classify" href="homepage.html">全部商品分类</a>
+			<a class="lot" href="#">臻鼎摸彩</a>
+			|
+			<a class="page" href="homepage.html">首页</a> |
+			<a class="page" href="#">奶粉专区<img src="img/homepage/sl_header_hot.gif" /></a> |
+			<a class="page" href="#">飞虎团购<img src="img/homepage/sl_header_new.gif" /></a>
+			<!--<a class="shopcar" href="#"><img  src="img/homepage/sl_header.jpg"/></a>-->
+			<div class="drop-menu">
+				<ul class="menu-list">
+
+					<li class="li1">
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="li2">
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="li3">
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+
+						<h3><a href="list-page.html">钟表首饰</a></h3>
+						<div class="menu-content">
+							<div class="content-left fl">
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+								<a href="#">男装</a>
+							</div>
+							<div class="content-right fr">
+								<h4><a href="#">热门品牌</a></h4>
+								<ul>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+									<li>
+										<a href="#">自然堂</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('.nav .classify').mousemove(function() {
+					$('.nav .drop-menu').show()
+				}).mouseleave(function() {
+					$('.nav .drop-menu').hide()
+				})
+
+				$('.nav .drop-menu').mouseenter(function() {
+
+					$(this).show()
+				}).mouseleave(function() {
+					$(this).hide()
+				})
+
+				var oldUsername = getCookie("username");
+
+				if(oldUsername) {
+					$('.header-contain>span').html("亲爱的<a class='myname'> " + oldUsername + " </a>您好!<a href = 'login.html' class='drop-out'>[退出]</a>");
+				}
+
+			})
+
+			$('.drop-out').click(function() {
+				removeCookie("username");
+				removeCookie("password");
+
+				$('.header-contain>span').html("您好，欢迎来到飞虎乐购！<a href='login.html' > 安全登陆</a> 还没加入我们？<a href='register.html'>免费注册</a>");
+			})
+
+			$('.middle .seach .btn').click(function() {
+				var watch = $('.middle .seach .txt').val()
+				if(watch.search(/表/gi) != -1) {
+					window.location.href = "list-page.html"
+				} else {
+					alert("无此类商品");
+				}
+			})
+		</script>
+	</body>
+
+</html>

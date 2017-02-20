@@ -1,0 +1,37 @@
+.chart-head{height: 40px;padding-top: 45px;position: relative;margin-bottom: 10px;}
+.chart-head .logo>a{display: block;width: 300px;height: 88px;background: url(../../img/chart/logo_new.png) no-repeat ;position: absolute;top: 12px;left: 15px;}
+.chart-head>ul{width: 635px;height: 40px;position: absolute;top: 35px;left: 330px;background: url(../../img/chart/cart32.png) no-repeat;}
+.chart-head>ul li{float: left;width: 211px;text-align: center;font-size: 16px;color: white;height: 35px;line-height: 35px;font-weight: bold;}
+h2.comwrap{height: 25px;line-height: 25px;margin-bottom: 15px;margin-top: 15px;font-size: 16px;color: #333333;font-weight:900;}
+
+.my-chart table{border-top: solid 2px #c7012c;border-collapse: collapse;width: 100%;}
+.my-chart table th{height: 35px;line-height: 35px;border-bottom: solid 1px #ddd;border-right: solid 1px #ddd;}
+.my-chart table th>div{float: left;text-align: center;}
+.my-chart table td>div{float: left;text-align: center;}
+.my-chart table .checknum{width: 60px;border: solid 1px #ddd;border-top: none;text-align: center;}
+.my-chart table .checknum input{vertical-align: middle;}
+.my-chart table .checknum label{vertical-align: middle;}
+
+.my-chart table  .goods-img{width: 206px;padding: 0 15px;margin-right: 5px;font-size: 14px;color: #cc0000;text-align: center;}
+.my-chart table  .goods-img img{width: 75px;height: 75px;}
+.my-chart table  .go-na{width: 353px;}
+.my-chart table  .go-num{width: 160px;}
+.my-chart table  .go-num .input_pm{margin: 0 auto;height: 21px;width: 50px;padding: 0 19px;position: relative;}
+.my-chart table  .go-num .input_pm input{border: 1px solid #DDDDDD;text-align: center;width: 50px;height: 17px;}
+.my-chart table  .go-num .input_pm span{background: url(../../img/chart/ui_quantity.png) no-repeat;position: absolute;height: 10px;width: 15px;cursor: pointer;}
+.my-chart table  .go-num .input_pm span.plus{background-position: 0 0;top: 0 ;right: 0;}
+.my-chart table  .go-num .input_pm span.minus{background-position: -15px 0;top: 11px ;right: 0;}
+
+.my-chart table  .go-pir{width: 140px;}
+.my-chart table  .go-tog{width: 140px;}
+.my-chart table  .go-op{width: 60px;}
+.my-chart table  .go-op a{color: #1C459D;cursor: pointer;}
+.my-chart table  .go-op a:hover{text-decoration: underline;}
+
+.my-chart table .chart-con{padding: 12px 0 ;border-bottom: solid 1px #ddd;border-right: solid 1px #ddd;}
+
+
+.price_TOGLE{border: solid 1px #ddd;border-top: 0;height: 56px;width: 100%;line-height: 56px;}
+.price_TOGLE .tip{float: left;color: #ff0000;}
+.price_TOGLE .price{float: right;font-size: 20px;color: #333;margin-right: 10px;}
+.price_TOGLE .price em{color: #f00;}

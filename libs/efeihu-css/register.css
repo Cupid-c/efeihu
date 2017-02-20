@@ -1,0 +1,25 @@
+.login_box{width: 548px;height: 433px;position: absolute;top: 30px;right: -16px;border:2px solid #EEDFBB;}
+
+.box-main{height: 380px;}
+
+.login_box .tips{color:#ff0000 ;margin-bottom: 5px;}
+ .tips b{color: #999;font-weight: bold;}
+.login_box  em{color: #c6002c;}
+.box-main p span{width: 15%;float: left;text-align: right;color: #666;}
+.box-main p input{width: 33%;height: 22px;float: left;}
+.login_box .box-main p i{float: left;width: 48%;height: 20px;margin-top: 6px;text-indent: 5px;color: ;line-height: 20px;margin-left: 2px;}
+
+.test{margin-left: 95px;height: 22px;line-height: 20px;margin-bottom: 10px;}
+.test .num{width: 63px;text-align: center;margin-right: 5px;float: left;height: 20px;border: 1px solid black;}
+
+.box-main div.check{margin-left: 90px;height: 18px;}
+.box-main div.check input{vertical-align:middle}
+.box-main div.check span{vertical-align:middle}
+label.error {
+  padding: 4px 100px 4px 16px;
+  color: #FF4C31;
+  background: #ECF9DF;
+}
+
+input.bnt{width: 140px;height: 40px;background: url(../../img/login-register/register.png) no-repeat;border: none;outline: none;margin: 19px 0 0 90px;}
+input.bnt:hover{background-position: 0 -40px;}
